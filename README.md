@@ -11,17 +11,16 @@ In order to effectively detect comparable queries, the algorithm must take synta
 ## DataSet
 
 A collection of question pairs with a binary label indicating whether or not they have the same meaning can be found in the Quora Question Pairs dataset on Kaggle. The question text and individual question identifiers are included in the dataset. With the aid of this dataset, a machine learning model that can precisely detect duplicate questions on the Quora platform will be created. This model will assist to enhance user experience and avoid redundancy. The construction of deep learning models for semantic similarity and challenges involving natural language processing have both made use of this dataset (Kaggle, 2017).
+
 <img width="473" alt="image" src="https://user-images.githubusercontent.com/98485769/236952381-2dc09967-c8ba-44f5-87d4-3887af2e2cc0.png">
 <img width="647" alt="Screenshot 2023-05-09 034939" src="https://user-images.githubusercontent.com/98485769/236955146-9c5aeca0-e04f-44c4-990f-fee228d6c1ee.png">
-<img width="401" alt="word_cloudq2" src="https://user-images.githubusercontent.com/98485769/236955395-d1c7310b-fdb1-449c-bb93-4cd99d6cd7dc.png">
-
+<img width="811" alt="image" src="https://user-images.githubusercontent.com/98485769/236952471-26d5edea-fd73-4c30-923b-4dd3e34c33b3.png">
 
 ## Preparation of DataSet
 
 First, a collection of stopwords is generated using the NLTK package in order to prepare the dataset. Then, "preprocess()" is defined as a special function to preprocess the text in each row of the DataFrame. In addition to removing stopwords and punctuation, this function tokenizes the text and merges the tokens back into a string. The "apply_parallel()" method applies the "preprocess()" function to each row of the DataFrame utilising parallel processing with 4 processes, accelerating the text preparation process. This makes it possible to process time for handling massive datasets much faster. The dataset is prepared for additional analysis and modelling when text preparation is complete.
-<img width="811" alt="image" src="https://user-images.githubusercontent.com/98485769/236952471-26d5edea-fd73-4c30-923b-4dd3e34c33b3.png">
 <img width="391" alt="word_cloudq1" src="https://user-images.githubusercontent.com/98485769/236955169-04fe8ac6-b7e6-4191-b3cf-4d618a2d881c.png">
-
+<img width="401" alt="word_cloudq2" src="https://user-images.githubusercontent.com/98485769/236955395-d1c7310b-fdb1-449c-bb93-4cd99d6cd7dc.png">
 
 # Implementation of Models
 
