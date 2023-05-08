@@ -36,6 +36,9 @@ A red dashed line on the elbow curve designates the number 8 as the ideal number
 
 The TF-IDF matrix of the text data is subjected to MiniBatchKMeans clustering with various numbers of clusters using this code. The clusters are then shown in two dimensions after PCA is used to decrease the matrix's dimensionality. This makes it possible to see how the text data is grouped visually. From 1 to 9, there are different numbers of clusters, and for each number, the clusters are presented in a scatter plot. The scatter plots display the clusters in two dimensions, with a unique colour for each cluster. The plots may be used to assess the effectiveness of the clustering and identify the number of clusters that best groups the text data.
 
+![WhatsApp Image 2023-05-09 at 4 07 43 AM](https://user-images.githubusercontent.com/98485769/236956343-7cdf6c33-352c-42e6-bbfb-392fbc614f08.jpeg)
+
+
 ### Cosine Similarity:
 
 We then combined the question1 and question2 columns into a single corpus before computing the cosine similarity between pairs of questions in the Quora Question Pairs dataset. The corpus was then converted into a bag-of-words (BOW) format using the CountVectorizer class from the scikit-learn package. Because of this, I was able to see each question as a vector of word counts. The cosine_similarity function from the metrics package of scikit-learn was then used to determine the cosine similarity of the BOW vectors for each pair of questions.
