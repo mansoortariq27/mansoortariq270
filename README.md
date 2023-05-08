@@ -2,19 +2,27 @@
 # Project Title
 
 Quora Question Similarity Detections
-![WhatsApp Image 2023-05-03 at 11 08 43 PM (1)](https://user-images.githubusercontent.com/98485769/236951122-d4fc64ae-cc25-4295-a4d4-4effe37b7a79.jpeg)
-
 
 ## Introduction
 
 The Document Similarity project attempts to create an algorithm that can precisely assess how similar two Quora questions are to one another. This algorithm will assist users in locating queries that are redundant or similar, enhancing the site's quality and relevance of its information. The fact that Quora questions might be worded differently even when they are requesting the same information presents one of the biggest hurdles for this project.
 In order to effectively detect comparable queries, the algorithm must take syntax, semantics, and context into account. By making the process of asking and answering questions more efficient, this project will improve the Quora user experience.
+
 ## DataSet
 
 A collection of question pairs with a binary label indicating whether or not they have the same meaning can be found in the Quora Question Pairs dataset on Kaggle. The question text and individual question identifiers are included in the dataset. With the aid of this dataset, a machine learning model that can precisely detect duplicate questions on the Quora platform will be created. This model will assist to enhance user experience and avoid redundancy. The construction of deep learning models for semantic similarity and challenges involving natural language processing have both made use of this dataset (Kaggle, 2017).
+<img width="473" alt="image" src="https://user-images.githubusercontent.com/98485769/236952381-2dc09967-c8ba-44f5-87d4-3887af2e2cc0.png">
+<img width="647" alt="Screenshot 2023-05-09 034939" src="https://user-images.githubusercontent.com/98485769/236955146-9c5aeca0-e04f-44c4-990f-fee228d6c1ee.png">
+<img width="401" alt="word_cloudq2" src="https://user-images.githubusercontent.com/98485769/236955395-d1c7310b-fdb1-449c-bb93-4cd99d6cd7dc.png">
+
+
 ## Preparation of DataSet
 
 First, a collection of stopwords is generated using the NLTK package in order to prepare the dataset. Then, "preprocess()" is defined as a special function to preprocess the text in each row of the DataFrame. In addition to removing stopwords and punctuation, this function tokenizes the text and merges the tokens back into a string. The "apply_parallel()" method applies the "preprocess()" function to each row of the DataFrame utilising parallel processing with 4 processes, accelerating the text preparation process. This makes it possible to process time for handling massive datasets much faster. The dataset is prepared for additional analysis and modelling when text preparation is complete.
+<img width="811" alt="image" src="https://user-images.githubusercontent.com/98485769/236952471-26d5edea-fd73-4c30-923b-4dd3e34c33b3.png">
+<img width="391" alt="word_cloudq1" src="https://user-images.githubusercontent.com/98485769/236955169-04fe8ac6-b7e6-4191-b3cf-4d618a2d881c.png">
+
+
 # Implementation of Models
 
 ##  Deliverable 1
@@ -76,3 +84,9 @@ In order to compare the BERT embeddings of the input text, the cosine similarity
 The cosine similarity scores and the ground truth labels are used to compare the accuracy of the text similarity calculation. The 'is_duplicate' labels from the example dataset, which determine if two bits of text are identical, serve as the ground truth labels in this code implementation.
 
 ## Conclusion
+
+In this project, we developed an NLP model to identify whether or not two questions are duplicates. We utilised the Quora dataset, which includes question pairings that are either marked as duplicates or not. The text was cleaned up and tokenized using the BERT tokenizer as part of the preprocessing of the data. On our dataset, we have adjusted the BERT model using the Hugging Face Transformers library.
+
+We adjusted the BERT model and then computed the embeddings of the questions. These embeddings were utilised to determine the cosine similarity between the question pairs. This cosine similarity has been utilised to determine whether or not the questions are duplicates by measuring how similar they are to one another. 
+
+To sum up, we have successfully created a model that can identify question pairings as duplicates or not. The BERT model, a potent pre-trained model for NLP tasks, was employed. We refined it using our dataset and applied it to generate the question embeddings. As a further indicator of how similar the queries are, we calculated the cosine similarity between these embeddings. Despite the accuracy of 63% that our model has attained, there is still space for growth. We can experiment with various pre-trained models or methodologies to see how similar the questions are to one another. Additionally, we may experiment with expanding our dataset or utilising other data pretreatment methods.
