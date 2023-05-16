@@ -85,6 +85,13 @@ In order to compare the BERT embeddings of the input text, the cosine similarity
 
 The cosine similarity scores and the ground truth labels are used to compare the accuracy of the text similarity calculation. The 'is_duplicate' labels from the example dataset, which determine if two bits of text are identical, serve as the ground truth labels in this code implementation.
 
+### SVM
+Implementing SVM involves splitting the data into training and testing sets, converting text data into TF-IDF vectors, selecting an SVM classifier, training the classifier on the training data, predicting labels for the testing data, and evaluating the performance of the SVM classifier. SVM is a versatile algorithm that can be used for classification tasks, especially with text data, and these steps help in effectively applying it to make predictions and assess its accuracy.
+
+### SVM Accuracy Computation
+
+
+
 ## Conclusion
 
 In this project, we developed an NLP model to identify whether or not two questions are duplicates. We utilised the Quora dataset, which includes question pairings that are either marked as duplicates or not. The text was cleaned up and tokenized using the BERT tokenizer as part of the preprocessing of the data. Using TF-IDF representation, the code clusters text data using MiniBatchKMeans. It plots an elbow curve and uses the elbow method to estimate the ideal number of clusters. Following that, it applies clustering with the ideal number of clusters and uses PCA for dimensionality reduction to visualise the clusters. On our dataset, we have adjusted the BERT model using the Hugging Face Transformers library.
