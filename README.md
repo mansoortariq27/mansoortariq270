@@ -131,3 +131,16 @@ We adjusted the BERT model and then computed the embeddings of the questions. Th
 
 To sum up, we have successfully created a model that can identify question pairings as duplicates or not. The BERT model, a potent pre-trained model for NLP tasks, was employed. We refined it using our dataset and applied it to generate the question embeddings. As a further indicator of how similar the queries are, we calculated the cosine similarity between these embeddings. Despite the accuracy of 63% that our model has attained, there is still space for growth. We can experiment with various pre-trained models or methodologies to see how similar the questions are to one another. Additionally, we may experiment with expanding our dataset or utilising other data pretreatment methods. 
 
+## Reference
+
+https://www.kaggle.com/competitions/quora-question-pairs
+
+https://www.slideshare.net/AbdallahBashir3/bert-176297542?from_action=save
+
+https://intellipaat.com/blog/what-is-lstm/?US#:~:text=LSTM%20stands%20for%20long%20short,especially%20in%20sequence%20prediction%20problems.
+
+https://scikit-learn.org/stable/modules/svm.html#:~:text=Support%20vector%20machines%20(SVMs)%20are,Effective%20in%20high%20dimensional%20spaces.
+
+https://en.wikipedia.org/wiki/K-means_clustering
+
+https://www.sciencedirect.com/topics/computer-science/cosine-similarity#:~:text=Cosine%20similarity%20measures%20the%20similarity,document%20similarity%20in%20text%20analysis.
