@@ -19,6 +19,9 @@ A collection of question pairs with a binary label indicating whether or not the
 ## Preparation of DataSet
 
 First, a collection of stopwords is generated using the NLTK package in order to prepare the dataset. Then, "preprocess()" is defined as a special function to preprocess the text in each row of the DataFrame. In addition to removing stopwords and punctuation, this function tokenizes the text and merges the tokens back into a string. The "apply_parallel()" method applies the "preprocess()" function to each row of the DataFrame utilising parallel processing with 4 processes, accelerating the text preparation process. This makes it possible to process time for handling massive datasets much faster. The dataset is prepared for additional analysis and modelling when text preparation is complete.
+
+## Word Cloud
+
 <img width="391" alt="word_cloudq1" src="https://user-images.githubusercontent.com/98485769/236955169-04fe8ac6-b7e6-4191-b3cf-4d618a2d881c.png">
 <img width="401" alt="word_cloudq2" src="https://user-images.githubusercontent.com/98485769/236955395-d1c7310b-fdb1-449c-bb93-4cd99d6cd7dc.png">
 
