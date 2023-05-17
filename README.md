@@ -39,6 +39,7 @@ The TF-IDF matrix of the text data is subjected to MiniBatchKMeans clustering wi
 ![WhatsApp Image 2023-05-09 at 4 07 43 AM](https://user-images.githubusercontent.com/98485769/236956343-7cdf6c33-352c-42e6-bbfb-392fbc614f08.jpeg)
 
 
+
 ### Cosine Similarity:
 
 We then combined the question1 and question2 columns into a single corpus before computing the cosine similarity between pairs of questions in the Quora Question Pairs dataset. The corpus was then converted into a bag-of-words (BOW) format using the CountVectorizer class from the scikit-learn package. Because of this, I was able to see each question as a vector of word counts. The cosine_similarity function from the metrics package of scikit-learn was then used to determine the cosine similarity of the BOW vectors for each pair of questions.
@@ -86,10 +87,31 @@ In order to compare the BERT embeddings of the input text, the cosine similarity
 The cosine similarity scores and the ground truth labels are used to compare the accuracy of the text similarity calculation. The 'is_duplicate' labels from the example dataset, which determine if two bits of text are identical, serve as the ground truth labels in this code implementation.
 
 ### SVM
+
 Implementing SVM involves splitting the data into training and testing sets, converting text data into TF-IDF vectors, selecting an SVM classifier, training the classifier on the training data, predicting labels for the testing data, and evaluating the performance of the SVM classifier. SVM is a versatile algorithm that can be used for classification tasks, especially with text data, and these steps help in effectively applying it to make predictions and assess its accuracy.
 
 ### SVM Accuracy Computation
 
+The code snippet uses evaluation metrics from the scikit-learn library to assess the performance of a classification model. It calculates and prints the accuracy, precision, recall, and F1-score based on the true and predicted labels. These metrics provide insights into the model's accuracy, quality of positive predictions, ability to identify positive instances, and overall balance between precision and recall.
+
+### Evaluation
+
+Evaluation Metrics:
+Accuracy: 0.76
+Precision: 0.71
+Recall: 0.63
+F1-Score: 0.66
+
+### LSTM
+
+I have implemented LSTM model for text classification using Keras. It preprocesses the text data by tokenizing and transforming it into numerical sequences using a tokenizer. The sequences are then padded to a fixed length. 
+
+The LSTM model architecture consists of an embedding layer, LSTM layer, and a dense layer with a sigmoid activation function. The model is compiled with the Adam optimizer(Adam optimizer is the extended version of stochastic gradient descent which could be implemented in various deep learning applications) and binary cross-entropy loss.
+
+
+The model is trained on the training data and evaluated on the test data. After training, it predicts the classes for the test data. 
+
+In summary, the code applies LSTM for text classification using Keras, preprocesses the data, defines the model architecture, trains the model, and makes predictions on the test data.
 
 
 ## Conclusion
