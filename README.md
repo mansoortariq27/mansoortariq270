@@ -48,6 +48,8 @@ We employed multithreading to parallelize the procedure since calculating the co
 
 The results of the cosine similarity computations were kept in a list, which was later changed into a NumPy array and appended to the original dataframe as a new column with the name "cosine_similarity." This column was used as the target variable for machine learning models that aimed to predict whether a pair of questions were duplicates.
 
+<img width="229" alt="image" src="https://github.com/mansoortariq27/mansoortariq270/assets/98485769/4bae9815-8d37-4c9f-872b-4f077fc1a54f">
+
 
 ## Deliverable 2
 
@@ -59,8 +61,9 @@ Many NLP applications, such as text categorization, sentiment analysis, and ques
 
 The content and context of the full phrase are captured by sentence embeddings, a numerical representation of a sentence. For the purpose of creating sentence embeddings, the BERT (Bidirectional Encoder Representations from Transformers) model has been extensively employed. We will go through how to create sentence embeddings using the BERT model in this report.
 
+<img width="272" alt="image" src="https://github.com/mansoortariq27/mansoortariq270/assets/98485769/b9cc91c3-951b-47b1-925d-c81914243ee2">
 
-### Data Preprocessing
+### Input Id's
 
 Preprocessing the data is the initial stage in creating sentence embeddings. Tokenization, which entails dividing the text into separate tokens or words, is a step in the data preparation process. WordPiece tokenization, used by the BERT model, divides the words into subwords.
 
@@ -96,11 +99,7 @@ The code snippet uses evaluation metrics from the scikit-learn library to assess
 
 ### Evaluation
 
-Evaluation Metrics:
-Accuracy: 0.76
-Precision: 0.71
-Recall: 0.63
-F1-Score: 0.66
+<img width="136" alt="image" src="https://github.com/mansoortariq27/mansoortariq270/assets/98485769/b6ffd728-a967-426b-ba88-924d748cd510">
 
 ### LSTM
 
@@ -108,10 +107,20 @@ I have implemented LSTM model for text classification using Keras. It preprocess
 
 The LSTM model architecture consists of an embedding layer, LSTM layer, and a dense layer with a sigmoid activation function. The model is compiled with the Adam optimizer(Adam optimizer is the extended version of stochastic gradient descent which could be implemented in various deep learning applications) and binary cross-entropy loss.
 
-
 The model is trained on the training data and evaluated on the test data. After training, it predicts the classes for the test data. 
 
-In summary, the code applies LSTM for text classification using Keras, preprocesses the data, defines the model architecture, trains the model, and makes predictions on the test data.
+<img width="815" alt="image" src="https://github.com/mansoortariq27/mansoortariq270/assets/98485769/7c15c8a5-0ae6-475e-bde5-cb5feb20f3b3">
+
+## Comparison Of All Models
+
+BERT model is the best because it predicts based upon the surroundings i.e BERT is designed to consider left and right words to identify the relationship of a word with other words in the Sentence. Although it's accuracy is low because we are training the model on 10% of the data and the data is biased i.e a hige variation between lengths so adding zeros to make them of equal length has affected the accuracy.
+
+SVM has good accuracy as we have trained it on the whole data set. SVM is also a good model to classify the text.
+
+LSTM has accuracy similar to BERT because of the same reason of padding zeros.
+
+
+<img width="182" alt="image" src="https://github.com/mansoortariq27/mansoortariq270/assets/98485769/8b64d688-6f50-4155-9824-75b636b97323">
 
 
 ## Conclusion
